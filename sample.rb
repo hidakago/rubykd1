@@ -13,14 +13,14 @@ class Player
       puts "「2」はパー"
       puts "です。"
 
-      number = gets.to_i # to_iの追記
+      number = gets.chomp
 
       #もし入力値が0でも1でも2でもない場合
-      if number != 0 && number != 1 && number != 2
+      if number != "0" && number != "1" && number != "2"
         puts "0〜2の数字を入力してください。"
       else
         #入力値を返す
-        return number
+        return number.to_i
       end
     end
   end
